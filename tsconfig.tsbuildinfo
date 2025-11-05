@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/routes/authRoutes.ts","./src/routes/blog.ts"],"version":"5.6.2"}
+{"root":["./src/index.ts","./src/routes/authroutes.ts","./src/routes/blog.ts","./src/utils/getheaders.ts"],"version":"5.6.2"}

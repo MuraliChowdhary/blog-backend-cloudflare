@@ -23,7 +23,8 @@ app.use('/api/*', cors({
     'https://blog-pnp.vercel.app',
     'https://blog.pickandpartner.com',
     'http://localhost:3000',
-    'https://blog-newsletter-lemon.vercel.app'
+    'https://blog-newsletter-lemon.vercel.app',
+    'https://blog.nextdevs.me/'
   ],
   allowHeaders: [
     'Content-Type',           // This is essential for JSON requests
@@ -48,7 +49,7 @@ app.use('/api/*', cors({
 // Root route
 app.get('/', (c) => {
   return c.json({
-    message: 'Newsletter Blog API is running!',
+    message: 'NextDevs Blog API is running!',
     version: '1.0.0',
   });
 });
