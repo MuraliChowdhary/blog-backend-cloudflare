@@ -24,7 +24,7 @@ app.use('/api/*', cors({
     'https://blog.pickandpartner.com',
     'http://localhost:3000',
     'https://blog-newsletter-lemon.vercel.app',
-    'https://blog.nextdevs.me/'
+    'https://blog.nextdevs.me'
   ],
   allowHeaders: [
     'Content-Type',           // This is essential for JSON requests
