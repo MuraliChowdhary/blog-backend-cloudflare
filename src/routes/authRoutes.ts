@@ -5,6 +5,8 @@ import { sign, verify } from 'hono/jwt';
 import bcrypt from 'bcryptjs';
 
 import {getCookie, setCookie, deleteCookie } from 'hono/cookie';
+import { validate } from '../utils/validate.middleware';
+import { userSchema } from '../utils/zod.types';
 // No longer importing PrismaClientKnownRequestError
 
 type Binding = {
@@ -191,7 +193,7 @@ export const userRouters = new Hono<{ Bindings: Binding, Variables: Variables }>
 //   }
 // });
 
-userRouters.post('/signup', async (c) => {
+userRouters.post('/signup',validate({ body: userSchema }), async (c) => {
   const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL,
   }).$extends(withAccelerate());

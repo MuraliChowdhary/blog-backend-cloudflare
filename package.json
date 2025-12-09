@@ -12,7 +12,8 @@
     "events-polyfill": "^2.1.2",
     "hono": "^4.0.5",
     "path-browserify": "^1.0.1",
-    "stream-browserify": "^3.0.0"
+    "stream-browserify": "^3.0.0",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241218.0",

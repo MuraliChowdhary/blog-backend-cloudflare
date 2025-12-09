@@ -39,7 +39,9 @@ app.use('/api/*', cors({
   credentials: true,
 }))
 
-
+app.get("/health", (c) => {
+  return c.json({ status: "OK" }, 200);
+});
 
 // OPTIONS handler (🔥 Required for preflight requests)
 // app.options('*', (c) => {
